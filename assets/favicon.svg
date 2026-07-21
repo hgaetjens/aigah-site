@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- AIGAH dot-cluster mark ("many beings", option 5a) -->
+  <rect width="64" height="64" fill="#ffffff"/>
+  <circle cx="10" cy="42" r="10" fill="#16181d"/>
+  <circle cx="32.5" cy="16.5" r="6.5" fill="#16181d"/>
+  <circle cx="38" cy="46" r="8" fill="#3d78b3"/>
+  <circle cx="55.5" cy="22.5" r="4.5" fill="#16181d"/>
+  <circle cx="61" cy="47" r="3" fill="#16181d"/>
+</svg>
