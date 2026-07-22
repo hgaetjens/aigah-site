@@ -64,11 +64,20 @@ a:hover {
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
   font-size: 20px;
   letter-spacing: 0.15em;
   color: #16181d;
+}
+
+.wordmark-dots {
+  width: 26px;
+  height: 18px;
+  flex: none;
 }
 
 .wordmark:hover {
@@ -513,11 +522,19 @@ section p:last-child {
 }
 
 .footer-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 0.15em;
   color: #16181d;
+}
+
+.footer-wordmark .wordmark-dots {
+  width: 24px;
+  height: 17px;
 }
 
 .footer-meta {
