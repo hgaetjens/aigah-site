@@ -912,7 +912,8 @@ section p:last-child {
   max-width: 640px;
 }
 
-.mentees {
+.mentees,
+.advisors {
   list-style: none;
   margin: 36px 0 0;
   padding: 0;
@@ -921,9 +922,29 @@ section p:last-child {
   gap: 40px 48px;
 }
 
-.mentees .people-name {
+.mentees .people-name,
+.advisors .people-name {
   margin: 0 0 8px;
   font-size: 22px;
+}
+
+/* optional portrait above a name (advisors, mentees) */
+.mentees img,
+.advisors img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 0 18px;
+  object-fit: cover;
+  border-radius: 3px;
+  background: #e8ecef;
+}
+
+.advisors .advisor-who {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #4a505a;
 }
 
 .mentees .mentee-who {
