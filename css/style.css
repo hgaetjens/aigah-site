@@ -928,6 +928,19 @@ section p:last-child {
   font-size: 22px;
 }
 
+/* linked names keep the heading colour; a thin blue underline marks the link */
+.people-name a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #3d78b3;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.people-name a:hover {
+  color: #3d78b3;
+}
+
 /* optional portrait above a name (advisors, mentees) */
 .mentees img,
 .advisors img {
