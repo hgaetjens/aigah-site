@@ -393,6 +393,11 @@ section p:last-child {
   align-items: start;
 }
 
+/* a second person card (founder, then team) */
+.people-grid + .people-grid {
+  margin-top: 56px;
+}
+
 .people-grid img {
   display: block;
   width: 100%;
