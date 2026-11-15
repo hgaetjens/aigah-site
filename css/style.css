@@ -195,11 +195,20 @@ a:hover {
   padding-top: 16px;
 }
 
-.nav-sub .nav-sub-all {
+.nav-sub a:last-child {
+  padding-bottom: 16px;
+}
+
+/* the incubator's overview page, with its three project pages indented below it */
+.nav-sub .nav-sub-head {
   margin-top: 7px;
   padding-top: 14px;
-  padding-bottom: 16px;
   border-top: 1px solid #e8ecef;
+  font-weight: 500;
+}
+
+.nav-sub .nav-sub-child {
+  padding-left: 38px;
 }
 
 /* Anchored sections clear the sticky header */
@@ -1463,12 +1472,17 @@ section p:last-child {
 
   .nav-sub a,
   .nav-sub a:first-child,
-  .nav-sub .nav-sub-all {
+  .nav-sub a:last-child,
+  .nav-sub .nav-sub-head {
     margin: 0;
     padding: 7px 0;
     border: 0;
     white-space: normal;
     font-size: 13.5px;
+  }
+
+  .nav-sub a.nav-sub-child {
+    padding-left: 16px;
   }
 
   .menu-toggle {
