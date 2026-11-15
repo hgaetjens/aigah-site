@@ -127,6 +127,81 @@ a:hover {
   cursor: pointer;
 }
 
+/* Projects menu: a list of project pages that opens under "Projects" */
+.nav-group {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nav-sub-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.nav-sub-toggle::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid #3d424b;
+  border-bottom: 1.5px solid #3d424b;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.nav-group.open .nav-sub-toggle::before {
+  transform: translateY(2px) rotate(-135deg);
+}
+
+/* the top padding bridges the gap to the link, so the list stays open while the pointer moves down */
+.nav-sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -21px;
+  padding-top: 16px;
+  z-index: 11;
+}
+
+.nav-sub::before {
+  content: '';
+  position: absolute;
+  inset: 16px 0 0 0;
+  background: #fdfdfc;
+  border: 1px solid #e8ecef;
+  border-radius: 3px;
+  z-index: -1;
+}
+
+.nav-group:hover .nav-sub,
+.nav-group.open .nav-sub {
+  display: block;
+}
+
+.nav-sub a {
+  display: block;
+  padding: 9px 20px;
+  white-space: nowrap;
+}
+
+.nav-sub a:first-child {
+  padding-top: 16px;
+}
+
+.nav-sub .nav-sub-all {
+  margin-top: 7px;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  border-top: 1px solid #e8ecef;
+}
+
 /* Anchored sections clear the sticky header */
 [id] {
   scroll-margin-top: 96px;
@@ -1360,6 +1435,40 @@ section p:last-child {
   .site-nav .nav-cta {
     margin-top: 8px;
     padding: 10px 20px;
+  }
+
+  /* in the phone menu the project pages are listed under "Projects", always visible */
+  .nav-group {
+    display: block;
+  }
+
+  .nav-group > a {
+    display: block;
+  }
+
+  .nav-sub-toggle {
+    display: none;
+  }
+
+  .nav-sub {
+    display: block;
+    position: static;
+    padding: 0 0 6px 16px;
+    border-left: 1px solid #e8ecef;
+  }
+
+  .nav-sub::before {
+    display: none;
+  }
+
+  .nav-sub a,
+  .nav-sub a:first-child,
+  .nav-sub .nav-sub-all {
+    margin: 0;
+    padding: 7px 0;
+    border: 0;
+    white-space: normal;
+    font-size: 13.5px;
   }
 
   .menu-toggle {

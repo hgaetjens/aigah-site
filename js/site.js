@@ -26,6 +26,29 @@
     });
   }
 
+  /* Projects menu: the arrow button opens and closes the list of project pages */
+  Array.prototype.forEach.call(document.querySelectorAll('.nav-group'), function (group) {
+    var button = group.querySelector('.nav-sub-toggle');
+    if (!button) { return; }
+    function setOpen(open) {
+      group.classList.toggle('open', open);
+      button.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    button.addEventListener('click', function () {
+      setOpen(!group.classList.contains('open'));
+    });
+    document.addEventListener('click', function (event) {
+      var onLink = event.target.tagName === 'A';
+      if (onLink || !group.contains(event.target)) { setOpen(false); }
+    });
+    group.addEventListener('focusout', function (event) {
+      if (event.relatedTarget && !group.contains(event.relatedTarget)) { setOpen(false); }
+    });
+    group.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') { setOpen(false); button.focus(); }
+    });
+  });
+
   /* Newsletter form: submit in place, inline success/error messaging */
   var form = document.querySelector('.newsletter-form');
   var message = document.querySelector('.newsletter-message');

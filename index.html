@@ -26,7 +26,19 @@
     <nav class="site-nav" id="site-nav">
       <a href="#about">About</a>
       <a href="#approach">Approach</a>
-      <a href="#projects">Projects</a>
+      <div class="nav-group">
+        <a href="#projects">Projects</a>
+        <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-projects"><span class="visually-hidden">Show the list of projects</span></button>
+        <div class="nav-sub" id="nav-projects">
+          <a href="#gap-map">Regulatory gap map</a>
+          <a href="#criteria">Criteria for &ldquo;non-human welfare&rdquo;</a>
+          <a href="incubator/uk.html">UK: Animal Sentience Committee</a>
+          <a href="#eu-consultation">EU consultation on high-risk AI</a>
+          <a href="incubator/evidence-bank.html">Evidence bank of farm automation failures</a>
+          <a href="incubator/philippines.html">Philippines: AI on farms</a>
+          <a href="incubator/" class="nav-sub-all">Sentient Futures incubator: all three projects</a>
+        </div>
+      </div>
       <a href="#people">People</a>
       <a href="theory-of-change.html">Theory of change</a>
       <a href="#contact" class="nav-cta">Get in touch</a>
@@ -222,19 +234,19 @@
       <span class="eyebrow-label">Current projects</span>
     </div>
 
-    <div class="project">
+    <div class="project" id="gap-map">
       <h3>Regulatory gap map: EU and UK</h3>
       <p class="project-status">Publishing in autumn 2026</p>
       <p>This map shows where EU and UK rules on AI leave animals out. It covers around 30 such intervention points, and for each one it names the legal instrument that could close the gap and a way of acting on it. We are building it as a shared resource for advocacy organisations.</p>
     </div>
 
-    <div class="project">
+    <div class="project" id="criteria">
       <h3>Operational criteria for &ldquo;non-human welfare&rdquo;</h3>
       <p class="project-status">In progress, with a draft for expert review in autumn 2026</p>
       <p>Non-human welfare is named in the GPAI Code of Practice as an example of systemic risk, but the Code offers no definition and no method for assessing it. We are developing criteria with which this risk can be defined and assessed, and we plan to circulate them before the Code's first review, which is expected in 2027.</p>
     </div>
 
-    <div class="project">
+    <div class="project" id="asc-submission">
       <h3>UK: a submission to the Animal Sentience Committee</h3>
       <p class="project-status">Submitted October 2026</p>
       <p>Laura Thomas-Walters, working with AIGAH, has made a submission to the Animal Sentience Committee. It asks the Committee to examine the regulatory sandboxes that the government plans for AI and other new technologies, meaning pilots in which existing rules can be relaxed for a limited time, and what these sandboxes mean for animals. In particular, it asks that animal welfare be named among the protections that a sandbox cannot modify or disapply. UK organisations can co-sign the submission, or they can file their own version.</p>
@@ -244,7 +256,7 @@
       </div>
     </div>
 
-    <div class="project">
+    <div class="project" id="eu-consultation">
       <h3>EU consultation: high-risk AI classification</h3>
       <p class="project-status">Submitted July 2026</p>
       <p>In 2026 the EU AI Office consulted on draft guidelines for classifying high-risk AI systems under the AI Act, and the final guidelines are expected at the end of the year. Failures of AI in animal contexts, for example in the automated climate control of livestock housing, fall within the risks that the guidelines address, but the draft contains no livestock example. By the deadline on 23 July, AIGAH submitted its own response and published a guide to responding within the consultation's scope. Four organisations and two researchers used the guide for their own responses.</p>
