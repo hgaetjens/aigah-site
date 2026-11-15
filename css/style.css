@@ -1398,3 +1398,173 @@ section p:last-child {
     padding: 56px 7vw 72px;
   }
 }
+
+/* ---- Incubator project pages --------------------------------------------- */
+
+/* links to the three project pages; the current page is underlined in blue */
+.project-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 36px;
+  margin: 0 0 56px;
+  border-bottom: 1px solid #e8ecef;
+}
+
+.project-nav a {
+  padding: 0 0 14px;
+  margin-bottom: -1px;
+  border-bottom: 2px solid transparent;
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #5a5f68;
+}
+
+.project-nav a:hover {
+  color: #16181d;
+}
+
+.project-nav a[aria-current="page"] {
+  color: #16181d;
+  border-bottom-color: #3d78b3;
+}
+
+.project-nav .project-nav-all {
+  margin-left: auto;
+  font-size: 14.5px;
+  font-weight: 400;
+}
+
+.subpage .panel-byline {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: #5a5f68;
+}
+
+.subpage .panel-source {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5a5f68;
+}
+
+.subpage .panel-source + .panel-subhead {
+  margin-top: 20px;
+}
+
+.panel-subhead {
+  margin: 44px 0 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: #16181d;
+}
+
+.resources {
+  margin: 0 0 8px;
+  max-width: 640px;
+}
+
+.resources dt {
+  margin: 0 0 4px;
+  font-size: 16.5px;
+  font-weight: 600;
+  color: #16181d;
+}
+
+.resources dd {
+  margin: 0 0 18px;
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: #4a505a;
+}
+
+.figures {
+  margin: 0 0 8px;
+  padding: 0 0 0 20px;
+  max-width: 620px;
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: #4a505a;
+}
+
+.figures li {
+  margin: 0 0 6px;
+}
+
+.material {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 640px;
+  border-top: 1px solid #e8ecef;
+}
+
+.material li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 24px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e8ecef;
+  font-size: 15.5px;
+  line-height: 1.55;
+}
+
+.material-title {
+  flex: 1 1 320px;
+  color: #4a505a;
+}
+
+a.material-title {
+  color: #3d78b3;
+  font-weight: 500;
+}
+
+a.material-title:hover {
+  color: #2c5f93;
+}
+
+.material-note {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a909a;
+}
+
+.subpage .project-context {
+  margin: 56px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid #e8ecef;
+  font-size: 14.5px;
+  color: #5a5f68;
+}
+
+.project-context + .back-link {
+  margin-top: 32px;
+}
+
+/* overview of the three projects */
+.incubator-list {
+  margin-top: 56px;
+}
+
+.incubator-list .project h3 {
+  max-width: 720px;
+}
+
+/* link from a mentee entry on the home page to the project's page */
+.mentees .mentee-link {
+  margin: 12px 0 0;
+  font-size: 14.5px;
+  font-weight: 500;
+}
+
+@media (max-width: 720px) {
+  .project-nav .project-nav-all {
+    margin-left: 0;
+  }
+}
