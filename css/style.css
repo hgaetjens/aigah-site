@@ -127,7 +127,7 @@ a:hover {
   cursor: pointer;
 }
 
-/* Projects menu: a list of project pages that opens under "Projects" */
+/* "Our work" menu: a list of project and event pages that opens under "Our work" */
 .nav-group {
   position: relative;
   display: inline-flex;
@@ -209,6 +209,14 @@ a:hover {
 
 .nav-sub .nav-sub-child {
   padding-left: 38px;
+}
+
+/* a heading inside the menu that is not a link itself, such as "Events" */
+.nav-sub .nav-sub-label {
+  display: block;
+  padding: 14px 20px 9px;
+  white-space: nowrap;
+  color: #5a5f68;
 }
 
 /* Anchored sections clear the sticky header */
@@ -1446,7 +1454,7 @@ section p:last-child {
     padding: 10px 20px;
   }
 
-  /* in the phone menu the project pages are listed under "Projects", always visible */
+  /* in the phone menu the project and event pages are listed under "Our work", always visible */
   .nav-group {
     display: block;
   }
@@ -1483,6 +1491,12 @@ section p:last-child {
 
   .nav-sub a.nav-sub-child {
     padding-left: 16px;
+  }
+
+  .nav-sub .nav-sub-label {
+    padding: 7px 0;
+    font-size: 13.5px;
+    white-space: normal;
   }
 
   .menu-toggle {
@@ -1690,4 +1704,95 @@ a.material-title:hover {
   .project-nav .project-nav-all {
     margin-left: 0;
   }
+}
+
+/* ---- Workshop page -------------------------------------------------------- */
+
+/* the title of a talk or of a part of a working session */
+.workshop-page h3 {
+  margin: 40px 0 12px;
+  max-width: 640px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #16181d;
+}
+
+.workshop-page .figures {
+  margin-bottom: 18px;
+  max-width: 640px;
+}
+
+/* the link to a speaker's slides, under the summary of the talk */
+.workshop-page .slides-link {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* photographs on the workshop page */
+.workshop-page .photo {
+  margin: 8px 0 26px;
+  max-width: 640px;
+}
+
+.workshop-page .photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.workshop-page .photo figcaption {
+  margin-top: 8px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #5a5f68;
+}
+
+/* the photograph at the top of the page, as wide as the title */
+.workshop-page .photo-lead {
+  margin: 28px 0 0;
+  max-width: 720px;
+}
+
+/* a group of photographs in two columns */
+.workshop-page .photo-group {
+  margin: 32px 0 8px;
+}
+
+.workshop-page .photo-group-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.workshop-page .photo-group-images img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+@media (max-width: 560px) {
+  .workshop-page .photo-group-images {
+    gap: 8px;
+  }
+}
+
+/* a photograph on the home page, under the text of a section */
+.home-photo {
+  margin: 40px 0 0;
+  max-width: 580px;
+}
+
+.home-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.home-photo figcaption {
+  margin-top: 8px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #5a5f68;
 }
